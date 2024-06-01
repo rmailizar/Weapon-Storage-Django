@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Stok</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Riwayat Perubahan Stok</h1>
+        <a href="{% url 'index' %}"><button id="new3">Back to Home</button></a>
+        <table id="weapons" border="1">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Senjata</th>
+                    <th>Tipe</th>
+                    <th>Waktu</th>
+                    <th>Jumlah Perubahan</th>
+                    <th>Jenis Perubahan</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for x in riwayat %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ x.weapon.nama }}</td>
+                    <td>{{ x.weapon.tipe }}</td>
+                    <td>{{ x.waktu }}</td>
+                    <td>{{ x.jumlah_perubahan }}</td>
+                    <td>{{ x.jenis_perubahan }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

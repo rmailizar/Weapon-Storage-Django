@@ -1,0 +1,129 @@
+/* Container */
+.container {
+    margin:auto;
+    padding: 0px 100px 100px 100px;
+}
+
+.container1 {
+    margin: 80px 240px 60px 240px;
+    padding: 0px 100px 100px 100px;
+}
+
+.container2 {
+    margin: 80px 240px 60px 240px;
+    padding: 0px 100px 100px 100px;
+}
+
+.container1 #new {
+    background-color: blue;
+    border-color: red;
+    border-radius: 5px;
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+.container2 #new1 {
+    background-color: blue;
+    border-radius: 5px;
+    padding: 8px;
+    color: white;
+    border-color: white;
+}
+
+h1 {
+    color: #294B29;
+}
+
+.container1 input {
+    padding: 8px;
+}
+
+.container2 input {
+    padding: 8px;
+}
+
+.container #new3 {
+    padding: 8px;
+    margin-bottom: 15px;
+    background-color: #003285;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 4px;
+    border: none;
+}
+
+.container #tambah {
+    padding: 8px;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    border-color: white;
+}
+
+.container #kurangi {
+    padding: 8px;
+    background-color: #FF6500;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    border-color: white;
+}
+
+/* Table Weapons */
+#weapons {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#weapons td,
+#weapons th {
+    border: 1px solid rgb(17, 4, 4);
+    padding: 6px;
+}
+
+#weapons tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#weapons tr:hover {
+    background-color: #ddd;
+}
+
+#weapons th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #294B29;
+    color: white;
+}
+
+#weapons #mid {
+    text-align: center;
+}
+
+#weapons #up {
+    background-color: green;
+    border-color: white;
+    border-radius: 5px;
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+#weapons #del {
+    background-color: red;
+    border-color: white;
+    border-radius: 5px;
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+#weapons button {
+    width: 100%;
+}
+

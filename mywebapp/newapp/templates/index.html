@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Weapons Data</h1>
+        <a href="{% url 'add' %}"><button id="new3">Tambah Data Senjata</button></a>
+        <a href="{% url 'riwayat_stok' %}"><button id="new3">Riwayat Stok</button></a>
+        <table id="weapons" border="1">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Senjata</th>
+                    <th>Tipe</th>
+                    <th>Jumlah</th>
+                    <th colspan="4" id="mid">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for x in wep %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ x.nama }}</td>
+                    <td>{{ x.tipe }}</td>
+                    <td>{{ x.jumlah }}</td>
+                    <td>
+                        <a href="update/{{ x.id }}">
+                            <button id="up">Update</button>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="delete/{{ x.id }}">
+                            <button id="del">Delete</button>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{% url 'tambah_stok' x.id %}">
+                            <button id="tambah">Tambah Stok</button>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{% url 'kurangi_stok' x.id %}">
+                            <button id="kurangi">Kurangi Stok</button>
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Weapon</title>
+</head>
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<body>
+    <div class="container2">
+        <h1>Update Weapon</h1>
+        <form action="{% url 'uprec' wep.id %}" method="post">
+            {% csrf_token %}
+            <label for="">Nama Senjata</label><br><br>
+            <input type="text" name="nama" value="{{wep.nama}}"><br><br>
+            <label for="">Tipe</label><br><br>
+            <input type="text" name="tipe" value="{{wep.tipe}}"><br><br>
+            <label for="">Jumlah</label><br><br>
+            <input type="text" name="jumlah" value="{{wep.jumlah}}"><br><br>
+            <button type="submit" id="new1">Update</button>
+        </form>
+
+    </div>
+</body>
+
+</html>
